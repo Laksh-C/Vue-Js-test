@@ -1,0 +1,31 @@
+<htmL>
+    <head>
+        <title>Seller</title>
+        
+    </head>
+
+    <body>
+        <a href="{% url 'homepage' %}"><button>Back to Home</button></a>
+
+        <form class="small-middle-container" method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p}}
+
+            <button class ="btn" type="submit">Save</button>
+        </form>
+        
+    </body>
+    
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .small-middle-container{
+            margin: auto;
+            width: 600px;
+        }
+    </style>
+</htmL>
